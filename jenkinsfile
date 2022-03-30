@@ -18,10 +18,7 @@ pipeline {
                                 -Dsonar.host.url=http://localhost:9000 \
                                 -Dsonar.login=78521d1d8cb9317ff27c75d64bd392819cea349b"
                 }
-                timeout(time: 3, unit: 'MINUTES'){
-                    waitForQualityGate abortPipeLine: qualityGateValidation(waitForQualityGate())
-                }
             }
-        }
+        }   
     }
 }
